@@ -3,6 +3,7 @@ duster.net
 
 Inspired by [duster.js](https://github.com/dmix/dusterjs), this tool lets you auto compile your dust templates inside Visual Studio.
 
+Download and install from Visual Studio Gallery: [DustJsGenerator](http://visualstudiogallery.msdn.microsoft.com/591bc050-d024-48a1-a79c-ef8009878596).
 ## Example
 
 **hello.html**
