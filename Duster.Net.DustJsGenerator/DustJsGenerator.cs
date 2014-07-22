@@ -14,7 +14,8 @@ namespace Duster.Net
 	[CodeGeneratorRegistration(typeof(DustJsGenerator), "Dust JS Compiled Template Generator", vsContextGuids.vsContextGuidVCSProject, GeneratesDesignTimeSource = true)]
 	[CodeGeneratorRegistration(typeof(DustJsGenerator), "Dust JS Compiled Template Generator", vsContextGuids.vsContextGuidVBProject, GeneratesDesignTimeSource = true)]
 	[CodeGeneratorRegistration(typeof(DustJsGenerator), "Dust JS Compiled Template Generator", vsContextGuids.vsContextGuidVJSProject, GeneratesDesignTimeSource = true)]
-    public class DustJsGenerator : ObjectWithSite, IVsSingleFileGenerator
+	[ProvideObject(typeof(DustJsGenerator), RegisterUsing = RegistrationMethod.CodeBase)]
+	public class DustJsGenerator : ObjectWithSite, IVsSingleFileGenerator
     {
 		#region IVsSingleFileGenerator Members
 
