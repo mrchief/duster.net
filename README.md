@@ -54,7 +54,7 @@ Which will output:
 
 ## Usage
 
- - Install Visual Studio Extension.
+ - Install Visual Studio Extension: [DustJsGenerator](http://visualstudiogallery.msdn.microsoft.com/591bc050-d024-48a1-a79c-ef8009878596).
  - In your solution, select the desired dust template.
  - Under `Properties > Custom Tool`, enter `DustJsGenerator`.  
  
