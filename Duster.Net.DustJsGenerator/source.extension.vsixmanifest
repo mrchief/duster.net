@@ -1,11 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
 	<Metadata>
-		<Identity Id="2b38f76b-0df7-4a21-b3f2-1d55547265b9" Version="1.0.1" Language="en-US" Publisher="Hrusikesh Panda" />
+		<Identity Id="2b38f76b-0df7-4a21-b3f2-1d55547265b9" Version="1.0.2" Language="en-US" Publisher="Hrusikesh Panda" />
 		<DisplayName>DustJs Compiled Template Generator</DisplayName>
 		<Description xml:space="preserve">Visual Studio Single File Generator (Custom tool) to compile dust.js templates into JavaScript files.</Description>
 		<MoreInfo>https://github.com/mrchief/duster.net</MoreInfo>
 		<License>LICENSE</License>
+		<Icon>dust-compiler-icon.png</Icon>
+		<PreviewImage>dust-compiler-preview.png</PreviewImage>
 	</Metadata>
 	<Installation InstalledByMsi="false" AllUsers="true">
 		<InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[12.0,13.0)" />
