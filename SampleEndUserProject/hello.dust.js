@@ -1,1 +1,1 @@
-(function(){dust.register("hello",body_0);function body_0(chk,ctx){return chk.write("<div>Hello ").reference(ctx.get("name"),ctx,"h").write("!</div><P>it works!</P>");}return body_0;})();
+(function(){dust.register("hello",body_0);function body_0(chk,ctx){return chk.write("<div>Hello ").reference(ctx.get("name"),ctx,"h").write("!</div><P>Does it work?</P>");}return body_0;})();
