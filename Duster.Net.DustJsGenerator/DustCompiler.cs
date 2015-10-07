@@ -14,9 +14,10 @@ namespace Duster.Net
         [SuppressMessage("Microsoft.Usage", "CA2202:Do not dispose objects multiple times")]
         private static string ValueFactory()
         {
-            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Duster.Net.dust-full-0.3.0.min.js"))
-            {                if (stream == null)
-                    throw new Exception("Couldn't get manifest resource stream for dust-full-0.3.0.min.js");
+            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Duster.Net.dust-full-2.7.2.min.js"))
+            {
+                if (stream == null)
+                    throw new Exception("Couldn't get manifest resource stream for dust-full-2.7.2.min.js");
 
                 using (var reader = new StreamReader(stream))
                     return reader.ReadToEnd();
@@ -32,8 +33,8 @@ namespace Duster.Net
         public static string Compile(string name, string markup)
         {
             return new Engine()
-				.Execute($"{DustJs.Value}dust.compile('{Sanitize(markup)}','{name}')")
-				.GetCompletionValue()
+                .Execute($"{DustJs.Value}dust.compile('{Sanitize(markup)}','{name}')")
+                .GetCompletionValue()
                 .ToString();
         }
 
