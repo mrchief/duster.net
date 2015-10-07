@@ -28,9 +28,9 @@ namespace Duster.Net
 		public int Generate(string wszInputFilePath, string bstrInputFileContents, string wszDefaultNamespace, IntPtr[] rgbOutputFileContents, out uint pcbOutput, IVsGeneratorProgress pGenerateProgress)
 		{
 			var generatedText = DustCompiler.Compile(Path.GetFileNameWithoutExtension(wszInputFilePath), bstrInputFileContents);
-			var bytes = Encoding.UTF8.GetBytes(generatedText);
+			var bytes = Encoding.UTF8.GetBytes($"/*! Generated with dustjs-linkedin - v2.7.2 */{Environment.NewLine}{generatedText}");
 
-			rgbOutputFileContents[0] = Marshal.AllocCoTaskMem(bytes.Length);
+            rgbOutputFileContents[0] = Marshal.AllocCoTaskMem(bytes.Length);
 			Marshal.Copy(bytes, 0, rgbOutputFileContents[0], bytes.Length);
 			pcbOutput = (uint)bytes.Length;
 

@@ -15,8 +15,7 @@ namespace Duster.Net
         private static string ValueFactory()
         {
             using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Duster.Net.dust-full-0.3.0.min.js"))
-            {
-                if (stream == null)
+            {                if (stream == null)
                     throw new Exception("Couldn't get manifest resource stream for dust-full-0.3.0.min.js");
 
                 using (var reader = new StreamReader(stream))
@@ -33,8 +32,8 @@ namespace Duster.Net
         public static string Compile(string name, string markup)
         {
             return new Engine()
-                .Execute(string.Format("{0}dust.compile('{1}','{2}')", DustJs.Value, Sanitize(markup), name))
-                .GetCompletionValue()
+				.Execute($"{DustJs.Value}dust.compile('{Sanitize(markup)}','{name}')")
+				.GetCompletionValue()
                 .ToString();
         }
 
